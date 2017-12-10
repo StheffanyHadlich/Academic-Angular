@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b2d92d1b63fc48aaa1db"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a6f7e120913bc2c28e29"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1671,22 +1671,43 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 var CityComponent = (function () {
     function CityComponent(http, baseUrl) {
+        var _this = this;
         this.http = http;
         this.baseUrl = baseUrl;
-        this.List();
-    }
-    CityComponent.prototype.List = function () {
-        var _this = this;
-        this.http.get(this.baseUrl + 'api/City').subscribe(function (result) {
-            _this.forecasts = result.json();
+        this.http
+            .get(this.baseUrl + 'api/state/')
+            .subscribe(function (result) {
+            _this.states = result.json();
         }, function (error) { return console.error(error); });
-    };
+        this.http
+            .get(this.baseUrl + 'api/city/')
+            .subscribe(function (result) {
+            _this.cities = result.json();
+        }, function (error) { return console.error(error); });
+    }
     CityComponent.prototype.Save = function () {
-        var value = { name: this.nameState };
-        this.http.post(this.baseUrl + 'api/City', value).subscribe(function (error) { return console.error(error); });
-        this.List();
+        var _this = this;
+        if (this.nameState == null || this.nameCity == null) {
+            alert("incompleted data");
+        }
+        else {
+            var value = { name: this.nameState, stateId: this.nameState };
+            this.http.post(this.baseUrl + 'api/City', value).subscribe(function (result) {
+                _this.cities.push(result.json());
+            });
+        }
     };
-    CityComponent.prototype.Delete = function () {
+    CityComponent.prototype.Delete = function (city) {
+        var _this = this;
+        this.http.delete(this.baseUrl + 'api/City/' + city.id).subscribe(function (result) {
+            if (result.status === 204) {
+                var index = _this.cities.indexOf(city);
+                _this.cities.splice(index, 1);
+            }
+        });
+    };
+    CityComponent.prototype.setState = function (state) {
+        this.nameState = state;
     };
     CityComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -1878,7 +1899,7 @@ var StateComponent = (function () {
     };
     StateComponent.prototype.Remove = function (state) {
         var _this = this;
-        this.http.delete(this.baseUrl + 'api/state' + state.id).subscribe(function (result) {
+        this.http.delete(this.baseUrl + 'api/state/' + state.id).subscribe(function (result) {
             if (result.status === 204) {
                 var index = _this.forecasts.indexOf(state);
                 _this.forecasts.splice(index, 1);
@@ -2259,7 +2280,7 @@ module.exports = "<div class='container-fluid'>\r\n    <div class='row'>\r\n    
 /* 25 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Register Citys</h1>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"nameCity\">City</span>\r\n  <input style=\"width:50%\" name=\"nameCity\" [(ngModel)]=\"nameCity\" type=\"text\" class=\"form-control\" placeholder=\"Name\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n\r\n<br>  \r\n\r\n<div class=\"btn-group\">\r\n  <button type=\"button\" class=\"btn btn-success\">Select state</button>\r\n  <button type=\"button\" class=\"btn btn-success dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n    <span class=\"caret\"></span>\r\n    <span class=\"sr-only\">Toggle Dropdown</span>\r\n  </button>\r\n  <ul class=\"dropdown-menu\"> \r\n    <li><a href=\"#\">State 1</a></li>\r\n    <li><a href=\"#\">State 2</a></li>\r\n    <li><a href=\"#\">State 3</a></li>\r\n  </ul>\r\n</div>\r\n\r\n<br>  \r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n  <button  type=\"button\" (click)=\"Save()\"class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>List</h1>\r\n\r\n<p>This component demonstrates fetching data(the Citys) from the server.</p>\r\n\r\n<p *ngIf=\"!forecasts\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"forecasts\">\r\n    <thead>\r\n        <tr>\r\n            <th>Name</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let forecast of forecasts\">\r\n            <td>{{ forecast.name }}</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n";
+module.exports = "<h1>Register Citys</h1>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"nameCity\">City</span>\r\n  <input style=\"width:50%\" name=\"nameCity\" [(ngModel)]=\"nameCity\" type=\"text\" name=\"nameCity\">\r\n</div>\r\n\r\n<br>  \r\n\r\n<div class=\"dropdown\" name=\"dropdownState\">\r\n  <select #selectElem (change)=\"setState(selectElem.value)\" class=\"form-control\">\r\n      <option>Select an state</option>\r\n      <option *ngFor=\"let state of states\" [value]=\"state.id\">{{state.name}}</option>\r\n  </select>\r\n</div>\r\n\r\n<br>  \r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n  <button  type=\"button\" (click)=\"Save()\"class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>Cities</h1>\r\n\r\n<p *ngIf=\"!forecasts\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"forecasts\">\r\n    <thead>\r\n        <tr>\r\n            <th>Id</th>\r\n            <th>City</th>\r\n            <th>State</th>\r\n             <th></th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let city of cities\">\r\n            <td>{{ city.id }}</td>\r\n            <td>{{ city.name }}</td>\r\n            <td>{{ city.state.name }}</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n";
 
 /***/ }),
 /* 26 */
@@ -2289,7 +2310,7 @@ module.exports = "<div class='main-nav'>\r\n    <div class='navbar navbar-invers
 /* 30 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>State</h1>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"nameState\">State</span>\r\n  <input style=\"width:50%\" name=\"nameState\" [(ngModel)]=\"nameState\" type=\"text\" class=\"form-control\" placeholder=\"Name\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n\r\n<br>        \r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n  <button  type=\"button\" (click)=\"Save()\"class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>List of states</h1>\r\n\r\n\r\n<p *ngIf=\"!forecasts\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"forecasts\">\r\n    <thead>\r\n        <tr>\r\n            <th>Name</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let forecast of forecasts\">\r\n            <td>{{forecast.id}}</td>\r\n            <td>{{ forecast.name }}</td>\r\n            <td>\r\n                    <button type=\"button\" class=\"btn btn-danger\" (click)=\"Remove(forecast)\">\r\n                        <span class='glyphicon glyphicon-trash'></span>\r\n                    </button>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n";
+module.exports = "<h1>States</h1>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"nameState\">State</span>\r\n  <input style=\"width:50%\" name=\"nameState\" [(ngModel)]=\"nameState\" type=\"text\" class=\"form-control\" placeholder=\"Name\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n\r\n<br>        \r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n  <button  type=\"button\" (click)=\"Save()\"class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>List of states</h1>\r\n\r\n\r\n<p *ngIf=\"!forecasts\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"forecasts\">\r\n    <thead>\r\n        <tr>\r\n            <th>Name</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let forecast of forecasts\">\r\n            <td>{{forecast.id}}</td>\r\n            <td>{{ forecast.name }}</td>\r\n            <td>\r\n                    <button type=\"button\" class=\"btn btn-danger\" (click)=\"Remove(forecast)\">\r\n                        <span class='glyphicon glyphicon-trash'></span>\r\n                    </button>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n";
 
 /***/ }),
 /* 31 */

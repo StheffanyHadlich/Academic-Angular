@@ -45,7 +45,8 @@ namespace Academic.Controllers
             {
                 await DbContext.City.AddAsync(value);
                 await DbContext.SaveChangesAsync();
-                return new NoContentResult();
+                value.state = await DbContext.State.SingleOrDefaultAsync(m => m.Id == value.stateId);
+                return Ok(value);
             }
             else
             {

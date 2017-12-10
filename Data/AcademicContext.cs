@@ -34,49 +34,7 @@ namespace Academic.Data
             var dataContext = serviceScope.ServiceProvider.GetRequiredService<AcademicContext>();
             dataContext.Database.EnsureCreated();
 
-            Student a1;
-
-            dataContext.Student.Add(a1 = new Student
-            {
-                name = "A",
-                address = "Rua 1",
-                email = "ex@j.c",
-                telephone = "99999",
-                city = new City
-                {
-                    name = "Guarapuava",
-                    state = new State
-                    {
-                        name = "Parana"
-                    }
-                }
-            });
-
-            Classroom c1;
-
-            dataContext.Classroom.Add(c1 = new Classroom
-            {
-                day = 2,
-                classroom = "sala 2",
-                vacancies = 12,
-                subject = new Subjects
-                {
-                    name = "Portuguese",
-                    workload = 20,
-                    course = new Course
-                    {
-                        name = "Computação",
-                        title = "Bacharelado"
-                    }
-                },
-                professor = new Professor
-                {
-                    name = "Quinaia"
-                }
-            });
-
-            dataContext.Enrollment.Add(new Enrollment {Hour = "14:00", student = a1, classroom = c1});
-            
+            dataContext.State.Add(new State{name = "Parana"});
             dataContext.SaveChanges();
         }
 

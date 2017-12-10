@@ -2,22 +2,16 @@
 
 <div class="input-group">
   <span class="input-group-addon" id="nameCity">City</span>
-  <input style="width:50%" name="nameCity" [(ngModel)]="nameCity" type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
+  <input style="width:50%" name="nameCity" [(ngModel)]="nameCity" type="text" name="nameCity">
 </div>
 
 <br>  
 
-<div class="btn-group">
-  <button type="button" class="btn btn-success">Select state</button>
-  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="caret"></span>
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <ul class="dropdown-menu"> 
-    <li><a href="#">State 1</a></li>
-    <li><a href="#">State 2</a></li>
-    <li><a href="#">State 3</a></li>
-  </ul>
+<div class="dropdown" name="dropdownState">
+  <select #selectElem (change)="setState(selectElem.value)" class="form-control">
+      <option>Select an state</option>
+      <option *ngFor="let state of states" [value]="state.id">{{state.name}}</option>
+  </select>
 </div>
 
 <br>  
@@ -26,21 +20,24 @@
   <button  type="button" (click)="Save()"class="btn btn-warning">Save</button>
 </div>
 
-<h1>List</h1>
-
-<p>This component demonstrates fetching data(the Citys) from the server.</p>
+<h1>Cities</h1>
 
 <p *ngIf="!forecasts"><em>Loading...</em></p>
 
 <table class='table' *ngIf="forecasts">
     <thead>
         <tr>
-            <th>Name</th>
+            <th>Id</th>
+            <th>City</th>
+            <th>State</th>
+             <th></th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let forecast of forecasts">
-            <td>{{ forecast.name }}</td>
+        <tr *ngFor="let city of cities">
+            <td>{{ city.id }}</td>
+            <td>{{ city.name }}</td>
+            <td>{{ city.state.name }}</td>
         </tr>
     </tbody>
 </table>

@@ -27,7 +27,7 @@ export class StateComponent {
     }
 
     public Remove(state:State) {
-         this.http.delete(this.baseUrl+'api/state'+state.id).subscribe(result => {
+         this.http.delete(this.baseUrl+'api/state/'+state.id).subscribe(result => {
             if(result.status === 204){
                 let index = this.forecasts.indexOf(state);
                 this.forecasts.splice(index,1);  
@@ -40,4 +40,5 @@ export class StateComponent {
 interface State {
     id: number;
     name : string;
+    nameState: string;
 }
