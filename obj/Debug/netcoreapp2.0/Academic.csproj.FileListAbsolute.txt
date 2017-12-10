@@ -8,3 +8,13 @@
 /home/stheffany/GitHub/Academic/obj/Debug/netcoreapp2.0/Academic.AssemblyInfo.cs
 /home/stheffany/GitHub/Academic/obj/Debug/netcoreapp2.0/Academic.dll
 /home/stheffany/GitHub/Academic/obj/Debug/netcoreapp2.0/Academic.pdb
+/home/stheffany/GitHub/Academic-Angular/bin/Debug/netcoreapp2.0/Academic.deps.json
+/home/stheffany/GitHub/Academic-Angular/bin/Debug/netcoreapp2.0/Academic.runtimeconfig.json
+/home/stheffany/GitHub/Academic-Angular/bin/Debug/netcoreapp2.0/Academic.runtimeconfig.dev.json
+/home/stheffany/GitHub/Academic-Angular/bin/Debug/netcoreapp2.0/Academic.dll
+/home/stheffany/GitHub/Academic-Angular/bin/Debug/netcoreapp2.0/Academic.pdb
+/home/stheffany/GitHub/Academic-Angular/obj/Debug/netcoreapp2.0/Academic.csproj.CoreCompileInputs.cache
+/home/stheffany/GitHub/Academic-Angular/obj/Debug/netcoreapp2.0/Academic.AssemblyInfoInputs.cache
+/home/stheffany/GitHub/Academic-Angular/obj/Debug/netcoreapp2.0/Academic.AssemblyInfo.cs
+/home/stheffany/GitHub/Academic-Angular/obj/Debug/netcoreapp2.0/Academic.dll
+/home/stheffany/GitHub/Academic-Angular/obj/Debug/netcoreapp2.0/Academic.pdb

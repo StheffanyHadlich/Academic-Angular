@@ -12541,11 +12541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/stheffany/GitHub/Academic/Academic.csproj",
+      "projectUniqueName": "/home/stheffany/GitHub/Academic-Angular/Academic.csproj",
       "projectName": "Academic",
-      "projectPath": "/home/stheffany/GitHub/Academic/Academic.csproj",
+      "projectPath": "/home/stheffany/GitHub/Academic-Angular/Academic.csproj",
       "packagesPath": "/home/stheffany/.nuget/packages/",
-      "outputPath": "/home/stheffany/GitHub/Academic/obj/",
+      "outputPath": "/home/stheffany/GitHub/Academic-Angular/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"

@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "dd1974665af4122dbfbf"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b2d92d1b63fc48aaa1db"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1860,7 +1860,7 @@ var StateComponent = (function () {
         this.http = http;
         this.baseUrl = baseUrl;
         this.http
-            .get(this.baseUrl + 'api/State')
+            .get(this.baseUrl + 'api/state/')
             .subscribe(function (result) {
             _this.forecasts = result.json();
         }, function (error) { return console.error(error); });
@@ -1869,7 +1869,7 @@ var StateComponent = (function () {
         var _this = this;
         var value = { name: this.nameState };
         this.http
-            .post(this.baseUrl + 'api/State', value)
+            .post(this.baseUrl + 'api/state/', value)
             .subscribe(function (result) {
             _this
                 .forecasts

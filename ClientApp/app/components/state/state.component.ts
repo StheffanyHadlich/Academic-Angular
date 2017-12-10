@@ -9,7 +9,7 @@ export class StateComponent {
 
     constructor(private http : Http, @Inject('BASE_URL')private baseUrl : string) {
         this.http
-            .get(this.baseUrl + 'api/State')
+            .get(this.baseUrl + 'api/state/')
             .subscribe(result => {
                 this.forecasts = result.json()as State[];
             }, error => console.error(error));
@@ -18,7 +18,7 @@ export class StateComponent {
     public Save() {
         var value = {name: this.nameState};
         this.http
-            .post(this.baseUrl + 'api/State', value)
+            .post(this.baseUrl + 'api/state/', value)
             .subscribe(result => {
                 this
                     .forecasts
