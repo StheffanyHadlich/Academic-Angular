@@ -1,0 +1,37 @@
+<h1>State</h1>
+
+<div class="input-group">
+  <span class="input-group-addon" id="nameState">State</span>
+  <input style="width:50%" name="nameState" [(ngModel)]="nameState" type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
+</div>
+
+<br>        
+
+<div class="btn-group" style="left:50%" role="group" aria-label="...">
+  <button  type="button" (click)="Save()"class="btn btn-warning">Save</button>
+</div>
+
+<h1>List of states</h1>
+
+
+<p *ngIf="!forecasts"><em>Loading...</em></p>
+
+<table class='table' *ngIf="forecasts">
+    <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let forecast of forecasts">
+            <td>{{forecast.id}}</td>
+            <td>{{ forecast.name }}</td>
+            <td>
+                    <button type="button" class="btn btn-danger" (click)="Remove(forecast)">
+                        <span class='glyphicon glyphicon-trash'></span>
+                    </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
