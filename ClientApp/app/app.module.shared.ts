@@ -13,6 +13,8 @@ import { StudentComponent } from './components/student/student.component';
 import { ProfessorComponent } from './components/professor/professor.component';
 import { CourseComponent } from './components/course/course.component';
 import { SubjectComponent } from './components/subject/subject.component';
+import { ClassroomComponent } from './components/classroom/classroom.component';
+import { EnrollmentComponent } from './components/enrollment/enrollment.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +26,9 @@ import { SubjectComponent } from './components/subject/subject.component';
         StudentComponent,
         ProfessorComponent,
         CourseComponent,
-        SubjectComponent
+        SubjectComponent,
+        ClassroomComponent,
+        EnrollmentComponent
 
     ],
     imports: [
@@ -40,6 +44,8 @@ import { SubjectComponent } from './components/subject/subject.component';
             { path: 'professor', component: ProfessorComponent },
             { path: 'course', component: CourseComponent },
             { path: 'subject', component: SubjectComponent },
+            { path: 'class', component: ClassroomComponent },
+            { path: 'enrollment', component: EnrollmentComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]

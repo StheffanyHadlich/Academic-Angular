@@ -1,0 +1,72 @@
+<h1>Classes!</h1>
+
+<div class="input-group">
+    <span class="input-group-addon" id="day">Day</span>
+    <input style="width:50%" name="day" [(ngModel)]="day" type="text" class="form-control" aria-describedby="basic-addon1">
+</div>
+<br>
+<div class="input-group">
+    <span class="input-group-addon" id="classroom">Classroom</span>
+    <input style="width:50%" name="classroom" [(ngModel)]="classroom" type="text" class="form-control" aria-describedby="basic-addon1">
+</div>
+<br>
+<div class="input-group">
+    <span class="input-group-addon" id="vacancies">Vancancies</span>
+    <input style="width:50%" name="vacancies" [(ngModel)]="vacancies" type="number" class="form-control" aria-describedby="basic-addon1">
+</div>
+
+<br>
+<br>
+
+<div class="dropdown" name="dropdownSubjects">
+    <select #selectElem (change)="setSubject(selectElem.value)" class="form-control">
+      <option>Select a Subject</option>
+      <option *ngFor="let sub of subjects" [value]="sub.id">{{sub.name}}</option>
+  </select>
+</div>
+
+<br/>
+
+<div class="dropdown" name="dropdownProfessor">
+    <select #selectElem (change)="setProfessor(selectElem.value)" class="form-control">
+      <option>Select a Professor</option>
+      <option *ngFor="let prof of professors" [value]="prof.id">{{prof.name}}</option>
+  </select>
+</div>
+
+<div class="btn-group" style="left:50%" role="group" aria-label="...">
+    <button type="button" (click)="Save()" class="btn btn-warning">Save</button>
+</div>
+
+<h1>List of classes</h1>
+
+
+<p *ngIf="!classes"><em>Loading...</em></p>
+
+<table class='table' *ngIf="classes">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Day</th>
+            <th>Classroom</th>
+            <th>Vancancies</th>
+            <th>Subject</th>
+            <th>Professor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let class of classes">
+            <td>{{ class.id }}</td>
+            <td>{{ class.day }}</td>
+            <td>{{ class.classroom }}</td>
+            <td>{{ class.vacancies }}</td>
+            <td>{{ class.subjects.name }}</td>
+            <td>{{ class.professor.name }}</td>
+            <td>
+                <button type="button" class="btn btn-danger" (click)="Remove(class)">
+                        <span class='glyphicon glyphicon-trash'></span>
+                    </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

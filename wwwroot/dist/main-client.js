@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "142e9eb5cbd47e3a86f4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7b90db423178fd288937"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -704,7 +704,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(54)(__webpack_require__.s = 54);
+/******/ 	return hotCreateRequire(58)(__webpack_require__.s = 58);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -745,8 +745,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app',
-            template: __webpack_require__(26),
-            styles: [__webpack_require__(40)]
+            template: __webpack_require__(28),
+            styles: [__webpack_require__(44)]
         })
     ], AppComponent);
     return AppComponent;
@@ -1038,14 +1038,14 @@ module.exports = Html5Entities;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_reflect_metadata__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_zone_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_bootstrap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_app_module_browser__ = __webpack_require__(11);
 
 
@@ -1088,7 +1088,7 @@ var options = {
   name: ''
 };
 if (true) {
-  var querystring = __webpack_require__(37);
+  var querystring = __webpack_require__(41);
   var overrides = querystring.parse(__resourceQuery.slice(1));
   if (overrides.path) options.path = overrides.path;
   if (overrides.timeout) options.timeout = overrides.timeout;
@@ -1208,11 +1208,11 @@ if (typeof window !== 'undefined') {
 }
 
 function createReporter() {
-  var strip = __webpack_require__(39);
+  var strip = __webpack_require__(43);
 
   var overlay;
   if (typeof document !== 'undefined' && options.overlay) {
-    overlay = __webpack_require__(42);
+    overlay = __webpack_require__(46);
   }
 
   var styles = {
@@ -1265,7 +1265,7 @@ function createReporter() {
   };
 }
 
-var processUpdate = __webpack_require__(43);
+var processUpdate = __webpack_require__(47);
 
 var customHandler;
 var subscribeAllHandler;
@@ -1330,7 +1330,7 @@ if (module) {
   };
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, "?path=__webpack_hmr&dynamicPublicPath=true", __webpack_require__(44)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, "?path=__webpack_hmr&dynamicPublicPath=true", __webpack_require__(48)(module)))
 
 /***/ }),
 /* 8 */
@@ -1540,7 +1540,7 @@ module.exports = function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* unused harmony export getBaseUrl */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_module_shared__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_app_app_component__ = __webpack_require__(3);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1583,25 +1583,29 @@ function getBaseUrl() {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModuleShared; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_app_app_component__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_navmenu_navmenu_component__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_home_home_component__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_state_state_component__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_navmenu_navmenu_component__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_home_home_component__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_state_state_component__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_city_city_component__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_student_student_component__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_professor_professor_component__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_course_course_component__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_subject_subject_component__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_student_student_component__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_professor_professor_component__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_course_course_component__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_subject_subject_component__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_classroom_classroom_component__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_enrollment_enrollment_component__ = __webpack_require__(16);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -1630,7 +1634,9 @@ var AppModuleShared = (function () {
                 __WEBPACK_IMPORTED_MODULE_10__components_student_student_component__["a" /* StudentComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__components_professor_professor_component__["a" /* ProfessorComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__components_course_course_component__["a" /* CourseComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__components_subject_subject_component__["a" /* SubjectComponent */]
+                __WEBPACK_IMPORTED_MODULE_13__components_subject_subject_component__["a" /* SubjectComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__components_classroom_classroom_component__["a" /* ClassroomComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__components_enrollment_enrollment_component__["a" /* EnrollmentComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
@@ -1645,6 +1651,8 @@ var AppModuleShared = (function () {
                     { path: 'professor', component: __WEBPACK_IMPORTED_MODULE_11__components_professor_professor_component__["a" /* ProfessorComponent */] },
                     { path: 'course', component: __WEBPACK_IMPORTED_MODULE_12__components_course_course_component__["a" /* CourseComponent */] },
                     { path: 'subject', component: __WEBPACK_IMPORTED_MODULE_13__components_subject_subject_component__["a" /* SubjectComponent */] },
+                    { path: 'class', component: __WEBPACK_IMPORTED_MODULE_14__components_classroom_classroom_component__["a" /* ClassroomComponent */] },
+                    { path: 'enrollment', component: __WEBPACK_IMPORTED_MODULE_15__components_enrollment_enrollment_component__["a" /* EnrollmentComponent */] },
                     { path: '**', redirectTo: 'home' }
                 ])
             ]
@@ -1720,7 +1728,7 @@ var CityComponent = (function () {
     CityComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'city',
-            template: __webpack_require__(27)
+            template: __webpack_require__(29)
         }),
         __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('BASE_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"], String])
@@ -1732,6 +1740,90 @@ var CityComponent = (function () {
 
 /***/ }),
 /* 14 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClassroomComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(2);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+var ClassroomComponent = (function () {
+    function ClassroomComponent(http, baseUrl) {
+        var _this = this;
+        this.http = http;
+        this.baseUrl = baseUrl;
+        this.http
+            .get(this.baseUrl + 'api/subjects')
+            .subscribe(function (result) {
+            _this.subjects = result.json();
+        }, function (error) { return console.error(error); });
+        this.http
+            .get(this.baseUrl + 'api/professor/')
+            .subscribe(function (result) {
+            _this.professors = result.json();
+        }, function (error) { return console.error(error); });
+        this.http
+            .get(this.baseUrl + 'api/classroom/')
+            .subscribe(function (result) {
+            _this.classes = result.json();
+        }, function (error) { return console.error(error); });
+    }
+    ClassroomComponent.prototype.Save = function () {
+        var _this = this;
+        if (this.subjectsId == null || this.professorsId == null) {
+            alert("incompleted data");
+        }
+        else {
+            var value = { day: this.day, classroom: this.classroom, vacancies: this.vacancies,
+                subject: this.subjectsId, professor: this.professorsId };
+            this.http.post(this.baseUrl + 'api/classroom', value).subscribe(function (result) {
+                _this.classes.push(result.json());
+            });
+        }
+    };
+    ClassroomComponent.prototype.Delete = function (classroom) {
+        var _this = this;
+        this.http.delete(this.baseUrl + 'api/classroom/' + classroom.id).subscribe(function (result) {
+            if (result.status === 204) {
+                var index = _this.classes.indexOf(classroom);
+                _this.classes.splice(index, 1);
+            }
+        });
+    };
+    ClassroomComponent.prototype.setSubject = function (sub) {
+        this.subjectsId = sub;
+    };
+    ClassroomComponent.prototype.setProfessor = function (prof) {
+        this.professorsId = prof;
+    };
+    ClassroomComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'classroom',
+            template: __webpack_require__(30)
+        }),
+        __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('BASE_URL')),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"], String])
+    ], ClassroomComponent);
+    return ClassroomComponent;
+}());
+
+
+
+/***/ }),
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1784,7 +1876,7 @@ var CourseComponent = (function () {
         });
     };
     CourseComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({ selector: 'course', template: __webpack_require__(28) }),
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({ selector: 'course', template: __webpack_require__(31) }),
         __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('BASE_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"], String])
     ], CourseComponent);
@@ -1794,7 +1886,91 @@ var CourseComponent = (function () {
 
 
 /***/ }),
-/* 15 */
+/* 16 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EnrollmentComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(2);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+var EnrollmentComponent = (function () {
+    function EnrollmentComponent(http, baseUrl) {
+        var _this = this;
+        this.http = http;
+        this.baseUrl = baseUrl;
+        this.http
+            .get(this.baseUrl + 'api/enrollment')
+            .subscribe(function (result) {
+            _this.enrollments = result.json();
+        }, function (error) { return console.error(error); });
+        this.http
+            .get(this.baseUrl + 'api/students')
+            .subscribe(function (result) {
+            _this.students = result.json();
+        }, function (error) { return console.error(error); });
+        this.http
+            .get(this.baseUrl + 'api/class')
+            .subscribe(function (result) {
+            _this.classrooms = result.json();
+        }, function (error) { return console.error(error); });
+    }
+    EnrollmentComponent.prototype.Save = function () {
+        var _this = this;
+        if (this.classroomId == null || this.studentId == null || this.dateEnrollment == null) {
+            alert("incompleted data");
+        }
+        else {
+            var value = { dateEnrollment: this.dateEnrollment, Hour: this.hour,
+                studentId: this.studentId, classroomId: this.classroomId };
+            this.http.post(this.baseUrl + 'api/Enrollment', value).subscribe(function (result) {
+                _this.enrollments.push(result.json());
+            });
+        }
+    };
+    EnrollmentComponent.prototype.Delete = function (enrollment) {
+        var _this = this;
+        this.http.delete(this.baseUrl + 'api/Enrollment/' + enrollment.id).subscribe(function (result) {
+            if (result.status === 204) {
+                var index = _this.enrollments.indexOf(enrollment);
+                _this.enrollments.splice(index, 1);
+            }
+        });
+    };
+    EnrollmentComponent.prototype.setStudent = function (student) {
+        this.studentId = student;
+    };
+    EnrollmentComponent.prototype.setClass = function (classroom) {
+        this.classroomId = classroom;
+    };
+    EnrollmentComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'enrollment',
+            template: __webpack_require__(32)
+        }),
+        __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('BASE_URL')),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"], String])
+    ], EnrollmentComponent);
+    return EnrollmentComponent;
+}());
+
+
+
+/***/ }),
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1813,7 +1989,7 @@ var HomeComponent = (function () {
     HomeComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'home',
-            template: __webpack_require__(29)
+            template: __webpack_require__(33)
         })
     ], HomeComponent);
     return HomeComponent;
@@ -1822,7 +1998,7 @@ var HomeComponent = (function () {
 
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1841,8 +2017,8 @@ var NavMenuComponent = (function () {
     NavMenuComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'nav-menu',
-            template: __webpack_require__(30),
-            styles: [__webpack_require__(41)]
+            template: __webpack_require__(34),
+            styles: [__webpack_require__(45)]
         })
     ], NavMenuComponent);
     return NavMenuComponent;
@@ -1851,7 +2027,7 @@ var NavMenuComponent = (function () {
 
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1904,7 +2080,7 @@ var ProfessorComponent = (function () {
         });
     };
     ProfessorComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({ selector: 'professor', template: __webpack_require__(31) }),
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({ selector: 'professor', template: __webpack_require__(35) }),
         __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('BASE_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"], String])
     ], ProfessorComponent);
@@ -1914,7 +2090,7 @@ var ProfessorComponent = (function () {
 
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1967,7 +2143,7 @@ var StateComponent = (function () {
         });
     };
     StateComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({ selector: 'state', template: __webpack_require__(32) }),
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({ selector: 'state', template: __webpack_require__(36) }),
         __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('BASE_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"], String])
     ], StateComponent);
@@ -1977,7 +2153,7 @@ var StateComponent = (function () {
 
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2045,7 +2221,7 @@ var StudentComponent = (function () {
         this.nameCity = city;
     };
     StudentComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({ selector: 'student', template: __webpack_require__(33) }),
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({ selector: 'student', template: __webpack_require__(37) }),
         __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('BASE_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"], String])
     ], StudentComponent);
@@ -2055,7 +2231,7 @@ var StudentComponent = (function () {
 
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2119,7 +2295,7 @@ var SubjectComponent = (function () {
     SubjectComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'subject',
-            template: __webpack_require__(34)
+            template: __webpack_require__(38)
         }),
         __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('BASE_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"], String])
@@ -2130,7 +2306,7 @@ var SubjectComponent = (function () {
 
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(undefined);
@@ -2144,7 +2320,7 @@ exports.push([module.i, "@media (max-width: 767px) {\r\n    /* On small screens,
 
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(undefined);
@@ -2158,19 +2334,19 @@ exports.push([module.i, "li .glyphicon {\r\n    margin-right: 10px;\r\n}\r\n\r\n
 
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  XmlEntities: __webpack_require__(25),
-  Html4Entities: __webpack_require__(24),
+  XmlEntities: __webpack_require__(27),
+  Html4Entities: __webpack_require__(26),
   Html5Entities: __webpack_require__(5),
   AllHtmlEntities: __webpack_require__(5)
 };
 
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports) {
 
 var HTML_ALPHA = ['apos', 'nbsp', 'iexcl', 'cent', 'pound', 'curren', 'yen', 'brvbar', 'sect', 'uml', 'copy', 'ordf', 'laquo', 'not', 'shy', 'reg', 'macr', 'deg', 'plusmn', 'sup2', 'sup3', 'acute', 'micro', 'para', 'middot', 'cedil', 'sup1', 'ordm', 'raquo', 'frac14', 'frac12', 'frac34', 'iquest', 'Agrave', 'Aacute', 'Acirc', 'Atilde', 'Auml', 'Aring', 'Aelig', 'Ccedil', 'Egrave', 'Eacute', 'Ecirc', 'Euml', 'Igrave', 'Iacute', 'Icirc', 'Iuml', 'ETH', 'Ntilde', 'Ograve', 'Oacute', 'Ocirc', 'Otilde', 'Ouml', 'times', 'Oslash', 'Ugrave', 'Uacute', 'Ucirc', 'Uuml', 'Yacute', 'THORN', 'szlig', 'agrave', 'aacute', 'acirc', 'atilde', 'auml', 'aring', 'aelig', 'ccedil', 'egrave', 'eacute', 'ecirc', 'euml', 'igrave', 'iacute', 'icirc', 'iuml', 'eth', 'ntilde', 'ograve', 'oacute', 'ocirc', 'otilde', 'ouml', 'divide', 'oslash', 'ugrave', 'uacute', 'ucirc', 'uuml', 'yacute', 'thorn', 'yuml', 'quot', 'amp', 'lt', 'gt', 'OElig', 'oelig', 'Scaron', 'scaron', 'Yuml', 'circ', 'tilde', 'ensp', 'emsp', 'thinsp', 'zwnj', 'zwj', 'lrm', 'rlm', 'ndash', 'mdash', 'lsquo', 'rsquo', 'sbquo', 'ldquo', 'rdquo', 'bdquo', 'dagger', 'Dagger', 'permil', 'lsaquo', 'rsaquo', 'euro', 'fnof', 'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigmaf', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'thetasym', 'upsih', 'piv', 'bull', 'hellip', 'prime', 'Prime', 'oline', 'frasl', 'weierp', 'image', 'real', 'trade', 'alefsym', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'crarr', 'lArr', 'uArr', 'rArr', 'dArr', 'hArr', 'forall', 'part', 'exist', 'empty', 'nabla', 'isin', 'notin', 'ni', 'prod', 'sum', 'minus', 'lowast', 'radic', 'prop', 'infin', 'ang', 'and', 'or', 'cap', 'cup', 'int', 'there4', 'sim', 'cong', 'asymp', 'ne', 'equiv', 'le', 'ge', 'sub', 'sup', 'nsub', 'sube', 'supe', 'oplus', 'otimes', 'perp', 'sdot', 'lceil', 'rceil', 'lfloor', 'rfloor', 'lang', 'rang', 'loz', 'spades', 'clubs', 'hearts', 'diams'];
@@ -2323,7 +2499,7 @@ module.exports = Html4Entities;
 
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports) {
 
 var ALPHA_INDEX = {
@@ -2484,61 +2660,73 @@ module.exports = XmlEntities;
 
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class='container-fluid'>\r\n    <div class='row'>\r\n        <div class='col-sm-3'>\r\n            <nav-menu></nav-menu>\r\n        </div>\r\n        <div class='col-sm-9 body-content'>\r\n            <router-outlet></router-outlet>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports) {
 
 module.exports = "<h1>Register Citys</h1>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"nameCity\">City</span>\r\n  <input style=\"width:50%\" name=\"nameCity\" [(ngModel)]=\"nameCity\" type=\"text\" name=\"nameCity\">\r\n</div>\r\n\r\n<br>  \r\n\r\n<div class=\"dropdown\" name=\"dropdownState\">\r\n  <select #selectElem (change)=\"setState(selectElem.value)\" class=\"form-control\">\r\n      <option>Select an state</option>\r\n      <option *ngFor=\"let state of states\" [value]=\"state.id\">{{state.name}}</option>\r\n  </select>\r\n</div>\r\n\r\n<br>  \r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n  <button  type=\"button\" (click)=\"Save()\"class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>Cities</h1>\r\n\r\n<p *ngIf=\"!cities\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"cities\">\r\n    <thead>\r\n        <tr>\r\n            <th>Id</th>\r\n            <th>City</th>\r\n            <th>State</th>\r\n             <th></th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let city of cities\">\r\n            <td>{{ city.id }}</td>\r\n            <td>{{city.name }}</td>\r\n            <td>{{ city.state.name }}</td>\r\n             <td>\r\n                    <button type=\"button\" class=\"btn btn-danger\" (click)=\"Delete(city)\">\r\n                        <span class='glyphicon glyphicon-trash'></span>\r\n                    </button>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n";
 
 /***/ }),
-/* 28 */
-/***/ (function(module, exports) {
-
-module.exports = "<h1>Courses</h1>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"name\">Course</span>\r\n  <input style=\"width:50%\" name=\"name\" [(ngModel)]=\"name\" type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n\r\n<br>    \r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"title\">Title</span>\r\n  <input style=\"width:50%\" name=\"title\" [(ngModel)]=\"title\" type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n  <button  type=\"button\" (click)=\"Save()\"class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>List of Courses</h1>\r\n\r\n\r\n<p *ngIf=\"!courses\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"courses\">\r\n    <thead>\r\n        <tr>\r\n            <th>Id</th>\r\n            <th>Name</th>\r\n            <th>Title</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let course of courses\">\r\n            <td>{{course.id}}</td>\r\n            <td>{{course.name }}</td>\r\n            <td>{{course.title }}</td>\r\n            <td>\r\n                    <button type=\"button\" class=\"btn btn-danger\" (click)=\"Remove(course)\">\r\n                        <span class='glyphicon glyphicon-trash'></span>\r\n                    </button>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n";
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports) {
-
-module.exports = "<h1>Haroooold</h1>\r\n \r\n\r\n";
-
-/***/ }),
 /* 30 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class='main-nav'>\r\n    <div class='navbar navbar-inverse'>\r\n        <div class='navbar-header'>\r\n            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>\r\n                <span class='sr-only'>Toggle navigation</span>\r\n                <span class='icon-bar'></span>\r\n                <span class='icon-bar'></span>\r\n                <span class='icon-bar'></span>\r\n            </button>\r\n            <a class='navbar-brand' [routerLink]=\"['/home']\">Academic</a>\r\n        </div>\r\n        <div class='clearfix'></div>\r\n        <div class='navbar-collapse collapse'>\r\n            <ul class='nav navbar-nav'>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/home']\">\r\n                        <span class='glyphicon glyphicon-home'></span> Home\r\n                    </a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/state']\">\r\n                        <span class='glyphicon glyphicon-glass'></span> State\r\n                    </a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/city']\">\r\n                        <span class='glyphicon glyphicon-cloud'></span> City\r\n                    </a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/student']\">\r\n                        <span class='glyphicon glyphicon-apple'></span> Student\r\n                    </a>\r\n                </li>\r\n                 <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/professor']\">\r\n                        <span class='glyphicon glyphicon-plane'></span> Professor\r\n                    </a>\r\n                </li>\r\n                 <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/course']\">\r\n                        <span class='glyphicon glyphicon-star'></span> Course\r\n                    </a>\r\n                </li>\r\n                 <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/subject']\">\r\n                        <span class='glyphicon glyphicon-cog'></span> Subject\r\n                    </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<h1>Classes!</h1>\r\n\r\n<div class=\"input-group\">\r\n    <span class=\"input-group-addon\" id=\"day\">Day</span>\r\n    <input style=\"width:50%\" name=\"day\" [(ngModel)]=\"day\" type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n<br>\r\n<div class=\"input-group\">\r\n    <span class=\"input-group-addon\" id=\"classroom\">Classroom</span>\r\n    <input style=\"width:50%\" name=\"classroom\" [(ngModel)]=\"classroom\" type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n<br>\r\n<div class=\"input-group\">\r\n    <span class=\"input-group-addon\" id=\"vacancies\">Vancancies</span>\r\n    <input style=\"width:50%\" name=\"vacancies\" [(ngModel)]=\"vacancies\" type=\"number\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n\r\n<br>\r\n<br>\r\n\r\n<div class=\"dropdown\" name=\"dropdownSubjects\">\r\n    <select #selectElem (change)=\"setSubject(selectElem.value)\" class=\"form-control\">\r\n      <option>Select a Subject</option>\r\n      <option *ngFor=\"let sub of subjects\" [value]=\"sub.id\">{{sub.name}}</option>\r\n  </select>\r\n</div>\r\n\r\n<br/>\r\n\r\n<div class=\"dropdown\" name=\"dropdownProfessor\">\r\n    <select #selectElem (change)=\"setProfessor(selectElem.value)\" class=\"form-control\">\r\n      <option>Select a Professor</option>\r\n      <option *ngFor=\"let prof of professors\" [value]=\"prof.id\">{{prof.name}}</option>\r\n  </select>\r\n</div>\r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n    <button type=\"button\" (click)=\"Save()\" class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>List of classes</h1>\r\n\r\n\r\n<p *ngIf=\"!classes\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"classes\">\r\n    <thead>\r\n        <tr>\r\n            <th>Id</th>\r\n            <th>Day</th>\r\n            <th>Classroom</th>\r\n            <th>Vancancies</th>\r\n            <th>Subject</th>\r\n            <th>Professor</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let class of classes\">\r\n            <td>{{ class.id }}</td>\r\n            <td>{{ class.day }}</td>\r\n            <td>{{ class.classroom }}</td>\r\n            <td>{{ class.vacancies }}</td>\r\n            <td>{{ class.subjects.name }}</td>\r\n            <td>{{ class.professor.name }}</td>\r\n            <td>\r\n                <button type=\"button\" class=\"btn btn-danger\" (click)=\"Remove(class)\">\r\n                        <span class='glyphicon glyphicon-trash'></span>\r\n                    </button>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>";
 
 /***/ }),
 /* 31 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Professors</h1>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"name\">Professor</span>\r\n  <input style=\"width:50%\" name=\"name\" [(ngModel)]=\"name\" type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n\r\n<br>        \r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n  <button  type=\"button\" (click)=\"Save()\"class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>List of Professors</h1>\r\n\r\n\r\n<p *ngIf=\"!professors\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"professors\">\r\n    <thead>\r\n        <tr>\r\n            <th>Id</th>\r\n            <th>Name</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let prof of professors\">\r\n            <td>{{prof.id}}</td>\r\n            <td>{{ prof.name }}</td>\r\n            <td>\r\n                    <button type=\"button\" class=\"btn btn-danger\" (click)=\"Remove(prof)\">\r\n                        <span class='glyphicon glyphicon-trash'></span>\r\n                    </button>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n";
+module.exports = "<h1>Courses</h1>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"name\">Course</span>\r\n  <input style=\"width:50%\" name=\"name\" [(ngModel)]=\"name\" type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n\r\n<br>    \r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"title\">Title</span>\r\n  <input style=\"width:50%\" name=\"title\" [(ngModel)]=\"title\" type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n  <button  type=\"button\" (click)=\"Save()\"class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>List of Courses</h1>\r\n\r\n\r\n<p *ngIf=\"!courses\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"courses\">\r\n    <thead>\r\n        <tr>\r\n            <th>Id</th>\r\n            <th>Name</th>\r\n            <th>Title</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let course of courses\">\r\n            <td>{{course.id}}</td>\r\n            <td>{{course.name }}</td>\r\n            <td>{{course.title }}</td>\r\n            <td>\r\n                    <button type=\"button\" class=\"btn btn-danger\" (click)=\"Remove(course)\">\r\n                        <span class='glyphicon glyphicon-trash'></span>\r\n                    </button>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n";
 
 /***/ }),
 /* 32 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>States</h1>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"nameState\">State</span>\r\n  <input style=\"width:50%\" name=\"nameState\" [(ngModel)]=\"nameState\" type=\"text\" class=\"form-control\" placeholder=\"Name\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n\r\n<br>        \r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n  <button  type=\"button\" (click)=\"Save()\"class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>List of states</h1>\r\n\r\n\r\n<p *ngIf=\"!forecasts\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"forecasts\">\r\n    <thead>\r\n        <tr>\r\n            <th>Name</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let forecast of forecasts\">\r\n            <td>{{forecast.id}}</td>\r\n            <td>{{ forecast.name }}</td>\r\n            <td>\r\n                    <button type=\"button\" class=\"btn btn-danger\" (click)=\"Remove(forecast)\">\r\n                        <span class='glyphicon glyphicon-trash'></span>\r\n                    </button>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n";
+module.exports = "<h1>Enrollment</h1>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"nameCity\">Hour</span>\r\n  <input style=\"width:50%\" name=\"hour\" [(ngModel)]=\"hour\" type=\"text\" >\r\n</div>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"nameCity\">Date</span>\r\n  <input style=\"width:50%\" name=\"dateEnrollment\" [(ngModel)]=\"dateEnrollment\" type=\"datetime\" >\r\n</div>\r\n\r\n<br>  \r\n\r\n<div class=\"dropdown\" name=\"dropdownClass\">\r\n  <select #selectElem (change)=\"setClass(selectElem.value)\" class=\"form-control\">\r\n      <option>Select a class</option>\r\n      <option *ngFor=\"let class of classrooms\" [value]=\"class.id\">{{class.name}}</option>\r\n  </select>\r\n</div>\r\n\r\n<div class=\"dropdown\" name=\"dropdownStudent\">\r\n  <select #selectElem (change)=\"setStudent(selectElem.value)\" class=\"form-control\">\r\n      <option>Select the student</option>\r\n      <option *ngFor=\"let student of students\" [value]=\"student.id\">{{student.name}}</option>\r\n  </select>\r\n</div>\r\n\r\n<br>  \r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n  <button  type=\"button\" (click)=\"Save()\"class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>Enrollment</h1>\r\n\r\n<p *ngIf=\"!cities\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"enrollments\">\r\n    <thead>\r\n        <tr>\r\n            <th>Id</th>\r\n            <th>Hour</th>\r\n            <th>date Enrollment</th>\r\n            <th>student</th>\r\n            <th>class</th>\r\n             <th></th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let enrollment of enrollments\">\r\n            <td>{{ enrollment.id }}</td>\r\n            <td>{{enrollment.name }}</td>\r\n            <td>{{ enrollment.state.name }}</td>\r\n             <td>\r\n                    <button type=\"button\" class=\"btn btn-danger\" (click)=\"Delete(city)\">\r\n                        <span class='glyphicon glyphicon-trash'></span>\r\n                    </button>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n";
 
 /***/ }),
 /* 33 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Students  (cade o address porra?)</h1>\r\n\r\n<div class=\"input-group\">\r\n    <span class=\"input-group-addon\" id=\"nameStudent\">Name</span>\r\n    <input style=\"width:50%\" name=\"nameStudent\" [(ngModel)]=\"nameStudent\" type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n<br>\r\n<div class=\"input-group\">\r\n    <span class=\"input-group-addon\" id=\"adressStudent\">Adress</span>\r\n    <input style=\"width:50%\" name=\"adressStudent\" [(ngModel)]=\"adressStudent\" type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n<br>\r\n<div class=\"input-group\">\r\n    <span class=\"input-group-addon\" id=\"nameState\">Email</span>\r\n    <input style=\"width:50%\" name=\"email\" [(ngModel)]=\"email\" type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n\r\n<br>\r\n\r\n<div class=\"input-group\">\r\n    <span class=\"input-group-addon\" id=\"telephone\">Telephone</span>\r\n    <input style=\"width:50%\" name=\"telephone\" [(ngModel)]=\"telephone\" type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n\r\n<br>\r\n\r\n<div class=\"dropdown\" name=\"dropdownCity\">\r\n    <select #selectElem (change)=\"setCity(selectElem.value)\" class=\"form-control\">\r\n      <option>Select a city</option>\r\n      <option *ngFor=\"let city of cities\" [value]=\"city.id\">{{city.name}}</option>\r\n  </select>\r\n</div>\r\n\r\n<br/>\r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n    <button type=\"button\" (click)=\"Save()\" class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>List of states</h1>\r\n\r\n\r\n<p *ngIf=\"!students\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"students\">\r\n    <thead>\r\n        <tr>\r\n            <th>Id</th>\r\n            <th>Name</th>\r\n            <th>Adress</th>\r\n            <th>Email</th>\r\n            <th>Telephone</th>\r\n            <th>City</th>\r\n\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let student of students\">\r\n            <td>{{ student.id }}</td>\r\n            <td>{{ student.name }}</td>\r\n            <td>{{ student.adressStudent }}</td>\r\n            <td>{{ student.email }}</td>\r\n            <td>{{ student.telephone }}</td>\r\n            <td>{{ student.city.name }}</td>\r\n            <td>\r\n                <button type=\"button\" class=\"btn btn-danger\" (click)=\"Remove(student)\">\r\n                        <span class='glyphicon glyphicon-trash'></span>\r\n                    </button>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>";
+module.exports = "<h1>Haroooold</h1>\r\n \r\n\r\n";
 
 /***/ }),
 /* 34 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Register Citys</h1>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"name\">Subject</span>\r\n  <input style=\"width:50%\" name=\"name\" [(ngModel)]=\"name\" type=\"text\" >\r\n</div>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"workload\">workload</span>\r\n  <input style=\"width:50%\" name=\"workload\" [(ngModel)]=\"workload\" type=\"number\">\r\n</div>\r\n\r\n<br>  \r\n\r\n<div class=\"dropdown\" name=\"dropdownCourses\">\r\n  <select #selectElem (change)=\"setCourse(selectElem.value)\" class=\"form-control\">\r\n      <option>Select a course</option>\r\n      <option *ngFor=\"let course of courses\" [value]=\"course.id\">{{course.name}}</option>\r\n  </select>\r\n</div>\r\n\r\n<br>  \r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n  <button  type=\"button\" (click)=\"Save()\"class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>Subjects</h1>\r\n\r\n<p *ngIf=\"!subjects\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"subjects\">\r\n    <thead>\r\n        <tr>\r\n            <th>Id</th>\r\n            <th>Subject</th>\r\n            <th>Workload</th>\r\n            <th>Course</th>\r\n             <th></th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let subject of subjects\">\r\n            <td>{{ subject.id }}</td>\r\n            <td>{{subject.name }}</td>\r\n            <td>{{subject.workload}}</td>\r\n            <td>{{subject.course.name }}</td>\r\n             <td>\r\n                    <button type=\"button\" class=\"btn btn-danger\" (click)=\"Delete(subject)\">\r\n                        <span class='glyphicon glyphicon-trash'></span>\r\n                    </button>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n";
+module.exports = "<div class='main-nav'>\r\n    <div class='navbar navbar-inverse'>\r\n        <div class='navbar-header'>\r\n            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>\r\n                <span class='sr-only'>Toggle navigation</span>\r\n                <span class='icon-bar'></span>\r\n                <span class='icon-bar'></span>\r\n                <span class='icon-bar'></span>\r\n            </button>\r\n            <a class='navbar-brand' [routerLink]=\"['/home']\">Academic</a>\r\n        </div>\r\n        <div class='clearfix'></div>\r\n        <div class='navbar-collapse collapse'>\r\n            <ul class='nav navbar-nav'>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/home']\">\r\n                        <span class='glyphicon glyphicon-home'></span> Home\r\n                    </a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/state']\">\r\n                        <span class='glyphicon glyphicon-glass'></span> State\r\n                    </a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/city']\">\r\n                        <span class='glyphicon glyphicon-cloud'></span> City\r\n                    </a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/student']\">\r\n                        <span class='glyphicon glyphicon-apple'></span> Student\r\n                    </a>\r\n                </li>\r\n                 <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/professor']\">\r\n                        <span class='glyphicon glyphicon-plane'></span> Professor\r\n                    </a>\r\n                </li>\r\n                 <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/course']\">\r\n                        <span class='glyphicon glyphicon-star'></span> Course\r\n                    </a>\r\n                </li>\r\n                 <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/subject']\">\r\n                        <span class='glyphicon glyphicon-cog'></span> Subject\r\n                    </a>\r\n                </li>\r\n                  <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/class']\">\r\n                        <span class='glyphicon glyphicon-fire'></span> Class\r\n                    </a>\r\n                </li>\r\n                 <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/enrollment']\">\r\n                        <span class='glyphicon glyphicon-eye-open'></span> Enrollment\r\n                    </a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }),
 /* 35 */
+/***/ (function(module, exports) {
+
+module.exports = "<h1>Professors</h1>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"name\">Professor</span>\r\n  <input style=\"width:50%\" name=\"name\" [(ngModel)]=\"name\" type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n\r\n<br>        \r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n  <button  type=\"button\" (click)=\"Save()\"class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>List of Professors</h1>\r\n\r\n\r\n<p *ngIf=\"!professors\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"professors\">\r\n    <thead>\r\n        <tr>\r\n            <th>Id</th>\r\n            <th>Name</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let prof of professors\">\r\n            <td>{{prof.id}}</td>\r\n            <td>{{ prof.name }}</td>\r\n            <td>\r\n                    <button type=\"button\" class=\"btn btn-danger\" (click)=\"Remove(prof)\">\r\n                        <span class='glyphicon glyphicon-trash'></span>\r\n                    </button>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n";
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports) {
+
+module.exports = "<h1>States</h1>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"nameState\">State</span>\r\n  <input style=\"width:50%\" name=\"nameState\" [(ngModel)]=\"nameState\" type=\"text\" class=\"form-control\" placeholder=\"Name\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n\r\n<br>        \r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n  <button  type=\"button\" (click)=\"Save()\"class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>List of states</h1>\r\n\r\n\r\n<p *ngIf=\"!forecasts\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"forecasts\">\r\n    <thead>\r\n        <tr>\r\n            <th>Name</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let forecast of forecasts\">\r\n            <td>{{forecast.id}}</td>\r\n            <td>{{ forecast.name }}</td>\r\n            <td>\r\n                    <button type=\"button\" class=\"btn btn-danger\" (click)=\"Remove(forecast)\">\r\n                        <span class='glyphicon glyphicon-trash'></span>\r\n                    </button>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n";
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports) {
+
+module.exports = "<h1>Students  (cade o address porra?)</h1>\r\n\r\n<div class=\"input-group\">\r\n    <span class=\"input-group-addon\" id=\"nameStudent\">Name</span>\r\n    <input style=\"width:50%\" name=\"nameStudent\" [(ngModel)]=\"nameStudent\" type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n<br>\r\n<div class=\"input-group\">\r\n    <span class=\"input-group-addon\" id=\"adressStudent\">Adress</span>\r\n    <input style=\"width:50%\" name=\"adressStudent\" [(ngModel)]=\"adressStudent\" type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n<br>\r\n<div class=\"input-group\">\r\n    <span class=\"input-group-addon\" id=\"nameState\">Email</span>\r\n    <input style=\"width:50%\" name=\"email\" [(ngModel)]=\"email\" type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n\r\n<br>\r\n\r\n<div class=\"input-group\">\r\n    <span class=\"input-group-addon\" id=\"telephone\">Telephone</span>\r\n    <input style=\"width:50%\" name=\"telephone\" [(ngModel)]=\"telephone\" type=\"text\" class=\"form-control\" aria-describedby=\"basic-addon1\">\r\n</div>\r\n\r\n<br>\r\n\r\n<div class=\"dropdown\" name=\"dropdownCity\">\r\n    <select #selectElem (change)=\"setCity(selectElem.value)\" class=\"form-control\">\r\n      <option>Select a city</option>\r\n      <option *ngFor=\"let city of cities\" [value]=\"city.id\">{{city.name}}</option>\r\n  </select>\r\n</div>\r\n\r\n<br/>\r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n    <button type=\"button\" (click)=\"Save()\" class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>List of states</h1>\r\n\r\n\r\n<p *ngIf=\"!students\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"students\">\r\n    <thead>\r\n        <tr>\r\n            <th>Id</th>\r\n            <th>Name</th>\r\n            <th>Adress</th>\r\n            <th>Email</th>\r\n            <th>Telephone</th>\r\n            <th>City</th>\r\n\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let student of students\">\r\n            <td>{{ student.id }}</td>\r\n            <td>{{ student.name }}</td>\r\n            <td>{{ student.adressStudent }}</td>\r\n            <td>{{ student.email }}</td>\r\n            <td>{{ student.telephone }}</td>\r\n            <td>{{ student.city.name }}</td>\r\n            <td>\r\n                <button type=\"button\" class=\"btn btn-danger\" (click)=\"Remove(student)\">\r\n                        <span class='glyphicon glyphicon-trash'></span>\r\n                    </button>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>";
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports) {
+
+module.exports = "<h1>Register Citys</h1>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"name\">Subject</span>\r\n  <input style=\"width:50%\" name=\"name\" [(ngModel)]=\"name\" type=\"text\" >\r\n</div>\r\n\r\n<div class=\"input-group\">\r\n  <span class=\"input-group-addon\" id=\"workload\">workload</span>\r\n  <input style=\"width:50%\" name=\"workload\" [(ngModel)]=\"workload\" type=\"number\">\r\n</div>\r\n\r\n<br>  \r\n\r\n<div class=\"dropdown\" name=\"dropdownCourses\">\r\n  <select #selectElem (change)=\"setCourse(selectElem.value)\" class=\"form-control\">\r\n      <option>Select a course</option>\r\n      <option *ngFor=\"let course of courses\" [value]=\"course.id\">{{course.name}}</option>\r\n  </select>\r\n</div>\r\n\r\n<br>  \r\n\r\n<div class=\"btn-group\" style=\"left:50%\" role=\"group\" aria-label=\"...\">\r\n  <button  type=\"button\" (click)=\"Save()\"class=\"btn btn-warning\">Save</button>\r\n</div>\r\n\r\n<h1>Subjects</h1>\r\n\r\n<p *ngIf=\"!subjects\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"subjects\">\r\n    <thead>\r\n        <tr>\r\n            <th>Id</th>\r\n            <th>Subject</th>\r\n            <th>Workload</th>\r\n            <th>Course</th>\r\n             <th></th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let subject of subjects\">\r\n            <td>{{ subject.id }}</td>\r\n            <td>{{subject.name }}</td>\r\n            <td>{{subject.workload}}</td>\r\n            <td>{{subject.course.name }}</td>\r\n             <td>\r\n                    <button type=\"button\" class=\"btn btn-danger\" (click)=\"Delete(subject)\">\r\n                        <span class='glyphicon glyphicon-trash'></span>\r\n                    </button>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n";
+
+/***/ }),
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2629,7 +2817,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 36 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2721,18 +2909,18 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 37 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(35);
-exports.encode = exports.stringify = __webpack_require__(36);
+exports.decode = exports.parse = __webpack_require__(39);
+exports.encode = exports.stringify = __webpack_require__(40);
 
 
 /***/ }),
-/* 38 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, global) {/*! *****************************************************************************
@@ -3860,10 +4048,10 @@ var Reflect;
             Function("return this;")());
 })(Reflect || (Reflect = {}));
 //# sourceMappingURL=Reflect.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(45), __webpack_require__(52)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(49), __webpack_require__(56)))
 
 /***/ }),
-/* 39 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3876,11 +4064,11 @@ module.exports = function (str) {
 
 
 /***/ }),
-/* 40 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-        var result = __webpack_require__(21);
+        var result = __webpack_require__(23);
 
         if (typeof result === "string") {
             module.exports = result;
@@ -3890,11 +4078,11 @@ module.exports = function (str) {
     
 
 /***/ }),
-/* 41 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-        var result = __webpack_require__(22);
+        var result = __webpack_require__(24);
 
         if (typeof result === "string") {
             module.exports = result;
@@ -3904,7 +4092,7 @@ module.exports = function (str) {
     
 
 /***/ }),
-/* 42 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*eslint-env browser*/
@@ -3948,7 +4136,7 @@ var colors = {
 };
 ansiHTML.setColors(colors);
 
-var Entities = __webpack_require__(23).AllHtmlEntities;
+var Entities = __webpack_require__(25).AllHtmlEntities;
 var entities = new Entities();
 
 exports.showProblems =
@@ -3989,7 +4177,7 @@ function problemType (type) {
 
 
 /***/ }),
-/* 43 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -4127,7 +4315,7 @@ module.exports = function(hash, moduleMap, options) {
 
 
 /***/ }),
-/* 44 */
+/* 48 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -4155,61 +4343,61 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 45 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(23);
 
 /***/ }),
-/* 46 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(38);
 
 /***/ }),
-/* 47 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(40);
 
 /***/ }),
-/* 48 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(41);
 
 /***/ }),
-/* 49 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(42);
 
 /***/ }),
-/* 50 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(47);
 
 /***/ }),
-/* 51 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(6);
 
 /***/ }),
-/* 52 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(8);
 
 /***/ }),
-/* 53 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(9);
 
 /***/ }),
-/* 54 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(8);

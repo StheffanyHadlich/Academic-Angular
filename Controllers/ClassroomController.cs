@@ -49,7 +49,10 @@ namespace Academic.Controllers
             {
                 await DbContext.Classroom.AddAsync(value);
                 await DbContext.SaveChangesAsync();
-                return new NoContentResult();
+                value.subject = await DbContext.Subjects.SingleOrDefaultAsync(m => m.Id == value.SubjectsId);
+                value.subject.course = await DbContext.Course.SingleOrDefaultAsync(m => m.Id == value.subject.courseId);
+                value.professor = await DbContext.Professor.SingleOrDefaultAsync(m => m.Id == value.professorId);
+                return Ok(value);
             }
             else
             {

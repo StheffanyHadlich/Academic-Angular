@@ -47,6 +47,16 @@
                         <span class='glyphicon glyphicon-cog'></span> Subject
                     </a>
                 </li>
+                  <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/class']">
+                        <span class='glyphicon glyphicon-fire'></span> Class
+                    </a>
+                </li>
+                 <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/enrollment']">
+                        <span class='glyphicon glyphicon-eye-open'></span> Enrollment
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

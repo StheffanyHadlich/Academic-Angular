@@ -10,7 +10,9 @@ namespace Academic.Models
         public string classroom { get; set; } = "";
         public int vacancies { get; set; } = 0;
         public Subjects subject { get; set; }
+        public Guid SubjectsId { get; set; }
         public Professor professor {get; set;} 
+         public Guid professorId {get; set;} 
         
     }
 
