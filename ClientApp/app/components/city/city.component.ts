@@ -14,13 +14,13 @@ export class CityComponent {
 
     constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string) {
         this.http
-            .get(this.baseUrl + 'api/state/')
+            .get(this.baseUrl + 'api/state')
             .subscribe(result => {
                 this.states = result.json()as State[];
             }, error => console.error(error));
         
         this.http
-            .get(this.baseUrl + 'api/city/')
+            .get(this.baseUrl + 'api/city')
             .subscribe(result => {
                 this.cities = result.json()as City[];
             }, error => console.error(error));
@@ -32,7 +32,7 @@ export class CityComponent {
             alert("incompleted data");
         }
         else{
-            var value = {name:this.nameState,stateId:this.nameState}
+            var value = {name:this.nameCity,stateId:this.nameState}
             this.http.post(this.baseUrl + 'api/City',value).subscribe(result => {
                 this.cities.push(result.json())});        
             
@@ -60,7 +60,7 @@ export class CityComponent {
 
 interface City {
     id : number;
-    nome : string;
+    name : string;
     estado: State;
     estadoId:number;
 }

@@ -1,0 +1,71 @@
+<h1>States</h1>
+
+<div class="input-group">
+    <span class="input-group-addon" id="nameState">Name</span>
+    <input style="width:50%" name="nameStudent" [(ngModel)]="nameStudent" type="text" class="form-control" aria-describedby="basic-addon1">
+</div>
+<br>
+<div class="input-group">
+    <span class="input-group-addon" id="nameState">Adress</span>
+    <input style="width:50%" name="adress" [(ngModel)]="adress" type="text" class="form-control" aria-describedby="basic-addon1">
+</div>
+<br>
+<div class="input-group">
+    <span class="input-group-addon" id="nameState">Email</span>
+    <input style="width:50%" name="email" [(ngModel)]="email" type="text" class="form-control" aria-describedby="basic-addon1">
+</div>
+
+<br>
+
+<div class="input-group">
+    <span class="input-group-addon" id="nameState">Telephone</span>
+    <input style="width:50%" name="telephone" [(ngModel)]="telephone" type="text" class="form-control" aria-describedby="basic-addon1">
+</div>
+
+<br>
+
+<div class="dropdown" name="dropdownCity">
+    <select #selectElem (change)="setCity(selectElem.value)" class="form-control">
+      <option>Select a city</option>
+      <option *ngFor="let city of cities" [value]="city.id">{{city.name}}</option>
+  </select>
+</div>
+
+<br/>
+
+<div class="btn-group" style="left:50%" role="group" aria-label="...">
+    <button type="button" (click)="Save()" class="btn btn-warning">Save</button>
+</div>
+
+<h1>List of states</h1>
+
+
+<p *ngIf="!students"><em>Loading...</em></p>
+
+<table class='table' *ngIf="students">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Adress</th>
+            <th>Email</th>
+            <th>Telephone</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{ student.id }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.adress }}</td>
+            <td>{{ student.email }}</td>
+            <td>{{ student.telephone }}</td>
+            <td>{{ student.city.name }}</td>
+            <td>
+                <button type="button" class="btn btn-danger" (click)="Remove(student)">
+                        <span class='glyphicon glyphicon-trash'></span>
+                    </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -22,9 +22,9 @@
 
 <h1>Cities</h1>
 
-<p *ngIf="!forecasts"><em>Loading...</em></p>
+<p *ngIf="!cities"><em>Loading...</em></p>
 
-<table class='table' *ngIf="forecasts">
+<table class='table' *ngIf="cities">
     <thead>
         <tr>
             <th>Id</th>
@@ -36,8 +36,13 @@
     <tbody>
         <tr *ngFor="let city of cities">
             <td>{{ city.id }}</td>
-            <td>{{ city.name }}</td>
+            <td>{{city.name }}</td>
             <td>{{ city.state.name }}</td>
+             <td>
+                    <button type="button" class="btn btn-danger" (click)="Delete(city)">
+                        <span class='glyphicon glyphicon-trash'></span>
+                    </button>
+            </td>
         </tr>
     </tbody>
 </table>

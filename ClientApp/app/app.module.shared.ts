@@ -7,20 +7,19 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
-import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
-import { CounterComponent } from './components/counter/counter.component';
 import { StateComponent } from './components/state/state.component';
 import { CityComponent } from './components/city/city.component';
+import { StudentComponent } from './components/student/student.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavMenuComponent,
-        CounterComponent,
-        FetchDataComponent,
         HomeComponent,
         StateComponent,
-        CityComponent
+        CityComponent,
+        StudentComponent
+
     ],
     imports: [
         CommonModule,
@@ -29,10 +28,9 @@ import { CityComponent } from './components/city/city.component';
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            { path: 'counter', component: CounterComponent },
-            { path: 'fetch-data', component: FetchDataComponent },
             { path: 'state', component: StateComponent },
             { path: 'city', component: CityComponent },
+            { path: 'student', component: StudentComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]

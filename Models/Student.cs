@@ -10,6 +10,7 @@ namespace Academic.Models
         public string email { get; set; } = "";
         public string telephone { get; set;} = "";
         public City city { get; set; }
+        public Guid cityId {get; set; }
     
     }
 

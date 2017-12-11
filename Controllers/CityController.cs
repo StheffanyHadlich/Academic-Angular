@@ -27,7 +27,7 @@ namespace Academic.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok(await DbContext.City.Include(m => m.State).ToListAsync());
+            return Ok(await DbContext.City.Include(m => m.state).ToListAsync());
         }
 
         // GET api/values/5

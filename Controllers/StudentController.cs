@@ -27,7 +27,7 @@ namespace Academic.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok(await DbContext.Student.ToListAsync());
+            return Ok(await DbContext.Student.Include(m=> m.city.state).ToListAsync());
         }
 
         // GET api/values/5
@@ -35,9 +35,10 @@ namespace Academic.Controllers
         public async Task<IActionResult> Get(Guid id) //read
         {
             return Ok(await DbContext.Student.SingleOrDefaultAsync(m => m.Id == id));
+            
 
         }
-        
+
         [HttpPost()]
         public async Task<IActionResult> Post([FromBody]Student value) // CREATE
         {
@@ -45,7 +46,9 @@ namespace Academic.Controllers
             {
                 await DbContext.Student.AddAsync(value);
                 await DbContext.SaveChangesAsync();
-                return new NoContentResult();
+                value.city = await DbContext.City.SingleOrDefaultAsync(m => m.Id == value.cityId);
+                value.city.state = await DbContext.State.SingleOrDefaultAsync(m => m.Id == value.city.stateId);
+                return Ok(value);
             }
             else
             {
@@ -54,9 +57,9 @@ namespace Academic.Controllers
 
         }
 
-        
+
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(Guid id,[FromBody]Student value) // UPDATE
+        public async Task<IActionResult> Put(Guid id, [FromBody]Student value) // UPDATE
         {
             if (value == null || value.Id != id)
             {
@@ -71,11 +74,11 @@ namespace Academic.Controllers
             }
 
             updateValue.name = value.name;
-            updateValue.address = value.address; 
-            updateValue.email = value.email; 
-            updateValue.telephone = value.telephone; 
-            updateValue.city = value.city;  
-            
+            updateValue.address = value.address;
+            updateValue.email = value.email;
+            updateValue.telephone = value.telephone;
+            updateValue.city = value.city;
+
 
             DbContext.Student.Update(updateValue);
             await DbContext.SaveChangesAsync();
