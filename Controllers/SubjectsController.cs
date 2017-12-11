@@ -27,7 +27,7 @@ namespace Academic.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok(await DbContext.Subjects.ToListAsync());
+            return Ok(await DbContext.Subjects.Include(m => m.course).ToListAsync());
         }
 
         // GET api/values/5
@@ -45,7 +45,8 @@ namespace Academic.Controllers
             {
                 await DbContext.Subjects.AddAsync(value);
                 await DbContext.SaveChangesAsync();
-                return new NoContentResult();
+                value.course = await DbContext.Course.SingleOrDefaultAsync(m => m.Id == value.courseId);
+                return Ok(value);
             }
             else
             {

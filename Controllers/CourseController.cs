@@ -45,7 +45,7 @@ namespace Academic.Controllers
             {
                 await DbContext.Course.AddAsync(value);
                 await DbContext.SaveChangesAsync();
-                return new NoContentResult();
+                return Ok(value);
             }
             else
             {

@@ -1,0 +1,63 @@
+<h1>Enrollment</h1>
+
+<div class="input-group">
+  <span class="input-group-addon" id="nameCity">Hour</span>
+  <input style="width:50%" name="hour" [(ngModel)]="hour" type="text" >
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon" id="nameCity">Date</span>
+  <input style="width:50%" name="dateEnrollment" [(ngModel)]="dateEnrollment" type="datetime" >
+</div>
+
+<br>  
+
+<div class="dropdown" name="dropdownClass">
+  <select #selectElem (change)="setClass(selectElem.value)" class="form-control">
+      <option>Select a class</option>
+      <option *ngFor="let class of classrooms" [value]="class.id">{{class.name}}</option>
+  </select>
+</div>
+
+<div class="dropdown" name="dropdownStudent">
+  <select #selectElem (change)="setStudent(selectElem.value)" class="form-control">
+      <option>Select the student</option>
+      <option *ngFor="let student of students" [value]="student.id">{{student.name}}</option>
+  </select>
+</div>
+
+<br>  
+
+<div class="btn-group" style="left:50%" role="group" aria-label="...">
+  <button  type="button" (click)="Save()"class="btn btn-warning">Save</button>
+</div>
+
+<h1>Enrollment</h1>
+
+<p *ngIf="!cities"><em>Loading...</em></p>
+
+<table class='table' *ngIf="enrollments">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Hour</th>
+            <th>date Enrollment</th>
+            <th>student</th>
+            <th>class</th>
+             <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let enrollment of enrollments">
+            <td>{{ enrollment.id }}</td>
+            <td>{{enrollment.name }}</td>
+            <td>{{ enrollment.state.name }}</td>
+             <td>
+                    <button type="button" class="btn btn-danger" (click)="Delete(city)">
+                        <span class='glyphicon glyphicon-trash'></span>
+                    </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

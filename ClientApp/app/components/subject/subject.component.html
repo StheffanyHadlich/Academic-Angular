@@ -1,0 +1,56 @@
+<h1>Register Citys</h1>
+
+<div class="input-group">
+  <span class="input-group-addon" id="name">Subject</span>
+  <input style="width:50%" name="name" [(ngModel)]="name" type="text" >
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon" id="workload">workload</span>
+  <input style="width:50%" name="workload" [(ngModel)]="workload" type="number">
+</div>
+
+<br>  
+
+<div class="dropdown" name="dropdownCourses">
+  <select #selectElem (change)="setCourse(selectElem.value)" class="form-control">
+      <option>Select a course</option>
+      <option *ngFor="let course of courses" [value]="course.id">{{course.name}}</option>
+  </select>
+</div>
+
+<br>  
+
+<div class="btn-group" style="left:50%" role="group" aria-label="...">
+  <button  type="button" (click)="Save()"class="btn btn-warning">Save</button>
+</div>
+
+<h1>Subjects</h1>
+
+<p *ngIf="!subjects"><em>Loading...</em></p>
+
+<table class='table' *ngIf="subjects">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Subject</th>
+            <th>Workload</th>
+            <th>Course</th>
+             <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let subject of subjects">
+            <td>{{ subject.id }}</td>
+            <td>{{subject.name }}</td>
+            <td>{{subject.workload}}</td>
+            <td>{{subject.course.name }}</td>
+             <td>
+                    <button type="button" class="btn btn-danger" (click)="Delete(subject)">
+                        <span class='glyphicon glyphicon-trash'></span>
+                    </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

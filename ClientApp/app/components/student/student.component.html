@@ -1,13 +1,13 @@
-<h1>States</h1>
+<h1>Students  (cade o address porra?)</h1>
 
 <div class="input-group">
-    <span class="input-group-addon" id="nameState">Name</span>
+    <span class="input-group-addon" id="nameStudent">Name</span>
     <input style="width:50%" name="nameStudent" [(ngModel)]="nameStudent" type="text" class="form-control" aria-describedby="basic-addon1">
 </div>
 <br>
 <div class="input-group">
-    <span class="input-group-addon" id="nameState">Adress</span>
-    <input style="width:50%" name="adress" [(ngModel)]="adress" type="text" class="form-control" aria-describedby="basic-addon1">
+    <span class="input-group-addon" id="adressStudent">Adress</span>
+    <input style="width:50%" name="adressStudent" [(ngModel)]="adressStudent" type="text" class="form-control" aria-describedby="basic-addon1">
 </div>
 <br>
 <div class="input-group">
@@ -18,7 +18,7 @@
 <br>
 
 <div class="input-group">
-    <span class="input-group-addon" id="nameState">Telephone</span>
+    <span class="input-group-addon" id="telephone">Telephone</span>
     <input style="width:50%" name="telephone" [(ngModel)]="telephone" type="text" class="form-control" aria-describedby="basic-addon1">
 </div>
 
@@ -50,6 +50,7 @@
             <th>Adress</th>
             <th>Email</th>
             <th>Telephone</th>
+            <th>City</th>
 
         </tr>
     </thead>
@@ -57,7 +58,7 @@
         <tr *ngFor="let student of students">
             <td>{{ student.id }}</td>
             <td>{{ student.name }}</td>
-            <td>{{ student.adress }}</td>
+            <td>{{ student.adressStudent }}</td>
             <td>{{ student.email }}</td>
             <td>{{ student.telephone }}</td>
             <td>{{ student.city.name }}</td>

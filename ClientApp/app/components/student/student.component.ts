@@ -7,7 +7,7 @@ export class StudentComponent {
     public students : any[];
     public cities : any[];
     public nameStudent : string;
-    public address: string;
+    public addressStudent: string;
     public email: string;
     public telephone: string;
     public nameCity: number;
@@ -34,10 +34,10 @@ export class StudentComponent {
             alert("incompleted data");
         }
         else{
-            var value = {name:this.nameStudent,address:this.address,email:this.email,
-                telephone:this.telephone, stateId:this.nameCity}
-            this.http.post(this.baseUrl + 'api/Student/',value).subscribe(result => {
-                this.cities.push(result.json())});        
+            var value = {name:this.nameStudent,address:this.addressStudent,email:this.email,
+                telephone:this.telephone, cityId:this.nameCity}
+            this.http.post(this.baseUrl + 'api/student',value).subscribe(result => {
+                this.students.push(result.json())});        
             
         } 
     }

@@ -1,0 +1,38 @@
+<h1>Professors</h1>
+
+<div class="input-group">
+  <span class="input-group-addon" id="name">Professor</span>
+  <input style="width:50%" name="name" [(ngModel)]="name" type="text" class="form-control" aria-describedby="basic-addon1">
+</div>
+
+<br>        
+
+<div class="btn-group" style="left:50%" role="group" aria-label="...">
+  <button  type="button" (click)="Save()"class="btn btn-warning">Save</button>
+</div>
+
+<h1>List of Professors</h1>
+
+
+<p *ngIf="!professors"><em>Loading...</em></p>
+
+<table class='table' *ngIf="professors">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prof of professors">
+            <td>{{prof.id}}</td>
+            <td>{{ prof.name }}</td>
+            <td>
+                    <button type="button" class="btn btn-danger" (click)="Remove(prof)">
+                        <span class='glyphicon glyphicon-trash'></span>
+                    </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

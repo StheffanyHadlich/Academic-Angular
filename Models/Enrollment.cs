@@ -9,7 +9,9 @@ namespace Academic.Models
         public DateTime dateEnrollment { get; set; } = DateTime.Now;
         public string Hour { get; set; } = "";
         public Student student { get; set; }
+        public Guid studentId {get; set;}
         public Classroom classroom { get; set; }
+        public Guid classroomId {get; set;}
     }
 
 }

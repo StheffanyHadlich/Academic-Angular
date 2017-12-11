@@ -10,6 +10,9 @@ import { HomeComponent } from './components/home/home.component';
 import { StateComponent } from './components/state/state.component';
 import { CityComponent } from './components/city/city.component';
 import { StudentComponent } from './components/student/student.component';
+import { ProfessorComponent } from './components/professor/professor.component';
+import { CourseComponent } from './components/course/course.component';
+import { SubjectComponent } from './components/subject/subject.component';
 
 @NgModule({
     declarations: [
@@ -18,7 +21,10 @@ import { StudentComponent } from './components/student/student.component';
         HomeComponent,
         StateComponent,
         CityComponent,
-        StudentComponent
+        StudentComponent,
+        ProfessorComponent,
+        CourseComponent,
+        SubjectComponent
 
     ],
     imports: [
@@ -31,6 +37,9 @@ import { StudentComponent } from './components/student/student.component';
             { path: 'state', component: StateComponent },
             { path: 'city', component: CityComponent },
             { path: 'student', component: StudentComponent },
+            { path: 'professor', component: ProfessorComponent },
+            { path: 'course', component: CourseComponent },
+            { path: 'subject', component: SubjectComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]

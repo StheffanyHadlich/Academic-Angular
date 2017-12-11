@@ -8,6 +8,7 @@ namespace Academic.Models
         public string name { get; set; } = "";
         public int workload {get ; set;} = 0;
         public Course course { get; set; } 
+        public Guid courseId {get; set;}
     }
 
 
