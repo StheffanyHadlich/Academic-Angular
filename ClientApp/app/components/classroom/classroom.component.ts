@@ -10,7 +10,7 @@ export class ClassroomComponent {
     public classes: any[];
     public professors: any[];
     public subjects: any[];
-    public day:string;
+    public day:number;
     public classroom:string;
     public vacancies:string;        
     public subjectsId:number;
@@ -43,8 +43,8 @@ export class ClassroomComponent {
         }
         else{
             var value = {day:this.day,classroom:this.classroom,vacancies:this.vacancies,
-                subject:this.subjectsId, professor:this.professorsId}
-            this.http.post(this.baseUrl + 'api/classroom',value).subscribe(result => {
+                subjectsId:this.subjectsId, professorId:this.professorsId}
+            this.http.post(this.baseUrl + 'api/Classroom',value).subscribe(result => {
                 this.classes.push(result.json())});        
             
         } 

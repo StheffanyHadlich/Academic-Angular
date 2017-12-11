@@ -1,4 +1,4 @@
-<h1>Students  (cade o address porra?)</h1>
+<h1>Students </h1>
 
 <div class="input-group">
     <span class="input-group-addon" id="nameStudent">Name</span>
@@ -6,8 +6,8 @@
 </div>
 <br>
 <div class="input-group">
-    <span class="input-group-addon" id="adressStudent">Adress</span>
-    <input style="width:50%" name="adressStudent" [(ngModel)]="adressStudent" type="text" class="form-control" aria-describedby="basic-addon1">
+    <span class="input-group-addon" id="addressStudent">Adress</span>
+    <input style="width:50%" name="addressStudent" [(ngModel)]="addressStudent" type="text" class="form-control" aria-describedby="basic-addon1">
 </div>
 <br>
 <div class="input-group">
@@ -37,8 +37,6 @@
     <button type="button" (click)="Save()" class="btn btn-warning">Save</button>
 </div>
 
-<h1>List of states</h1>
-
 
 <p *ngIf="!students"><em>Loading...</em></p>
 
@@ -58,7 +56,7 @@
         <tr *ngFor="let student of students">
             <td>{{ student.id }}</td>
             <td>{{ student.name }}</td>
-            <td>{{ student.adressStudent }}</td>
+            <td>{{ student.addressStudent }}</td>
             <td>{{ student.email }}</td>
             <td>{{ student.telephone }}</td>
             <td>{{ student.city.name }}</td>

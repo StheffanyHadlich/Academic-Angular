@@ -74,7 +74,7 @@ namespace Academic.Controllers
             }
 
             updateValue.name = value.name;
-            updateValue.address = value.address;
+            updateValue.addressStudent = value.addressStudent;
             updateValue.email = value.email;
             updateValue.telephone = value.telephone;
             updateValue.city = value.city;

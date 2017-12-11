@@ -30,11 +30,12 @@ export class StudentComponent {
     }
 
     public Save() {
+        
         if(this.nameCity==null || this.nameStudent==null){
             alert("incompleted data");
         }
         else{
-            var value = {name:this.nameStudent,address:this.addressStudent,email:this.email,
+            var value = {name:this.nameStudent,addressStudent:this.addressStudent,email:this.email,
                 telephone:this.telephone, cityId:this.nameCity}
             this.http.post(this.baseUrl + 'api/student',value).subscribe(result => {
                 this.students.push(result.json())});        

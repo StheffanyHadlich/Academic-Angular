@@ -12,7 +12,6 @@ export class EnrollmentComponent {
     public classrooms: any[];
     public classroomId: number;
     public enrollments: any[];
-    public dateEnrollment: Date;
     public hour:string;
 
     constructor(private http: Http, @Inject('BASE_URL') private baseUrl: string) {
@@ -23,13 +22,13 @@ export class EnrollmentComponent {
             }, error => console.error(error));
         
         this.http
-            .get(this.baseUrl + 'api/students')
+            .get(this.baseUrl + 'api/student')
             .subscribe(result => {
                 this.students = result.json()as any[];
             }, error => console.error(error));
 
         this.http
-            .get(this.baseUrl + 'api/class')
+            .get(this.baseUrl + 'api/classroom')
             .subscribe(result => {
                 this.classrooms = result.json()as any[];
             }, error => console.error(error));
@@ -37,12 +36,11 @@ export class EnrollmentComponent {
     }
 
     Save() {     
-        if(this.classroomId==null || this.studentId==null || this.dateEnrollment==null ){
+        if(this.classroomId==null || this.studentId==null){
             alert("incompleted data");
         }
         else{
-            var value = {dateEnrollment:this.dateEnrollment,Hour:this.hour,
-            studentId:this.studentId,classroomId:this.classroomId}
+            var value = {studentId:this.studentId,classroomId:this.classroomId}
             this.http.post(this.baseUrl + 'api/Enrollment',value).subscribe(result => {
                 this.enrollments.push(result.json())});        
             

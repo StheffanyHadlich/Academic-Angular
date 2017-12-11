@@ -27,9 +27,8 @@ namespace Academic.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok(await DbContext.Enrollment.ToListAsync());
+            return Ok(await DbContext.Enrollment.Include(m=>m.student).Include(m=>m.classroom).ToListAsync());
         }
-
         // GET api/values/5
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(Guid id) //read
@@ -45,7 +44,9 @@ namespace Academic.Controllers
             {
                 await DbContext.Enrollment.AddAsync(value);
                 await DbContext.SaveChangesAsync();
-                return new NoContentResult();
+                value.student = await DbContext.Student.SingleOrDefaultAsync(m => m.Id == value.studentId);
+                value.classroom = await DbContext.Classroom.SingleOrDefaultAsync(m => m.Id == value.classroomId);
+                return Ok(value);
             }
             else
             {
@@ -70,8 +71,6 @@ namespace Academic.Controllers
                 return NotFound();
             }
 
-            updateValue.dateEnrollment = value.dateEnrollment; 
-            updateValue.Hour = value.Hour;
             updateValue.student = value.student;
             updateValue.classroom = value.classroom;
 

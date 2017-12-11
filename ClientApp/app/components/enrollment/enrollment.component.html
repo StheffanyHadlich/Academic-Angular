@@ -1,26 +1,16 @@
 <h1>Enrollment</h1>
 
-<div class="input-group">
-  <span class="input-group-addon" id="nameCity">Hour</span>
-  <input style="width:50%" name="hour" [(ngModel)]="hour" type="text" >
-</div>
-
-<div class="input-group">
-  <span class="input-group-addon" id="nameCity">Date</span>
-  <input style="width:50%" name="dateEnrollment" [(ngModel)]="dateEnrollment" type="datetime" >
-</div>
-
-<br>  
-
 <div class="dropdown" name="dropdownClass">
   <select #selectElem (change)="setClass(selectElem.value)" class="form-control">
       <option>Select a class</option>
-      <option *ngFor="let class of classrooms" [value]="class.id">{{class.name}}</option>
+      <option *ngFor="let class of classrooms" [value]="class.id">{{class.day}}</option>
   </select>
 </div>
 
+<br/>
+
 <div class="dropdown" name="dropdownStudent">
-  <select #selectElem (change)="setStudent(selectElem.value)" class="form-control">
+  <select #selectElem2 (change)="setStudent(selectElem2.value)" class="form-control">
       <option>Select the student</option>
       <option *ngFor="let student of students" [value]="student.id">{{student.name}}</option>
   </select>
@@ -32,16 +22,16 @@
   <button  type="button" (click)="Save()"class="btn btn-warning">Save</button>
 </div>
 
-<h1>Enrollment</h1>
 
-<p *ngIf="!cities"><em>Loading...</em></p>
+
+<p *ngIf="!enrollments"><em>Loading...</em></p>
 
 <table class='table' *ngIf="enrollments">
     <thead>
         <tr>
             <th>Id</th>
+            <th>Date</th>
             <th>Hour</th>
-            <th>date Enrollment</th>
             <th>student</th>
             <th>class</th>
              <th></th>
@@ -50,8 +40,10 @@
     <tbody>
         <tr *ngFor="let enrollment of enrollments">
             <td>{{ enrollment.id }}</td>
-            <td>{{enrollment.name }}</td>
-            <td>{{ enrollment.state.name }}</td>
+            <td>{{enrollment.dateEnrollment }}</td>
+            <td>{{ enrollment.hour }}</td>
+            <td>{{ enrollment.student.name }}</td>
+            <td>{{ enrollment.classroom.classroom }}</td>
              <td>
                     <button type="button" class="btn btn-danger" (click)="Delete(city)">
                         <span class='glyphicon glyphicon-trash'></span>

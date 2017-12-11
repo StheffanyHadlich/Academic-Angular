@@ -1,8 +1,8 @@
-<h1>Classes!</h1>
+<h1>Classes</h1>
 
 <div class="input-group">
     <span class="input-group-addon" id="day">Day</span>
-    <input style="width:50%" name="day" [(ngModel)]="day" type="text" class="form-control" aria-describedby="basic-addon1">
+    <input style="width:50%" name="day" [(ngModel)]="day" type="number" class="form-control" aria-describedby="basic-addon1">
 </div>
 <br>
 <div class="input-group">
@@ -28,7 +28,7 @@
 <br/>
 
 <div class="dropdown" name="dropdownProfessor">
-    <select #selectElem (change)="setProfessor(selectElem.value)" class="form-control">
+    <select #selectElem2 (change)="setProfessor(selectElem2.value)" class="form-control">
       <option>Select a Professor</option>
       <option *ngFor="let prof of professors" [value]="prof.id">{{prof.name}}</option>
   </select>
@@ -37,9 +37,6 @@
 <div class="btn-group" style="left:50%" role="group" aria-label="...">
     <button type="button" (click)="Save()" class="btn btn-warning">Save</button>
 </div>
-
-<h1>List of classes</h1>
-
 
 <p *ngIf="!classes"><em>Loading...</em></p>
 
@@ -60,7 +57,7 @@
             <td>{{ class.day }}</td>
             <td>{{ class.classroom }}</td>
             <td>{{ class.vacancies }}</td>
-            <td>{{ class.subjects.name }}</td>
+            <td>{{ class.subject.name }}</td>
             <td>{{ class.professor.name }}</td>
             <td>
                 <button type="button" class="btn btn-danger" (click)="Remove(class)">
